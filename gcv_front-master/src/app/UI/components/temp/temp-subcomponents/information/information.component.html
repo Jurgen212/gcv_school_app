@@ -1,0 +1,15 @@
+<div    class="data-container">
+    <p  [style]="tamanoPxTitle" 
+        *ngIf="titleOptions.exist"
+        class="title">{{ titleOptions.info }}</p>
+
+    <p  [style]="tamanoPxInfo"
+        *ngIf="informationOptions.exist"
+        class="info"
+        [innerHtml]="informationOptions.info"></p>
+
+    <a  *ngFor="let item of informationOptions.link" [href]="item.url"
+        class="link"
+        target="_blank"> <span *ngIf="item.text.trim()!== ''" class="link">{{ item.text }}</span></a>
+        
+</div> 

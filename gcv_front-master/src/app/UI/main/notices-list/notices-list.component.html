@@ -1,0 +1,37 @@
+<div class="noticias-principales-container">
+
+    <div class="noticia-lateral-container">
+        <div class="lateral-container">
+            <a class="data-img" routerLink="/informacion/calendario">           
+                <img src="../../../../assets/notices/calendar.png">
+                <span>Calendario</span>
+            </a>
+            <a class="data-img" routerLink="/informacion/programador-semanal">  
+                <img src="../../../../assets/notices/newsletters.png">
+                <span>Programador semanal</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="noticias-cuadrado-container">
+
+
+        <p class="titlenot">Gimnasianos al día</p>
+
+        <p class="titlenot" *ngIf="noticiasMostrar === null || noticiasMostrar === undefined ">Cargando ...</p>
+        <div class="noticias-container" *ngIf="noticiasMostrar !== null && noticiasMostrar !== undefined">
+
+            <div    class="noticia" 
+                    *ngFor="let notice of noticiasMostrar"
+                    (click)="redirection( notice.id_notice )">
+
+                <img    [src]="notice.data.image"
+                        [alt]="notice.id_notice">
+                <p class="subtitle">{{ notice.data.title }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+

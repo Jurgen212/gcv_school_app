@@ -1,0 +1,77 @@
+.mini-notices-container{
+    position        : relative      ;
+    width           : 100vw         ;
+    margin          : 0;
+
+    height          : auto          ;
+
+    display         : flex          ;
+    flex-direction  : column        ;
+    align-items     : center        ;
+    justify-content : space-around  ;
+    overflow-x: none;
+}
+
+
+.subnotice{
+    width   : 250px;
+    height  : 250px;
+    display : flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.subinfo{
+    font-size: 12px;
+    font-weight: 500;
+}
+.title{
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.image{
+    object-fit:cover;
+    width: 100%;
+    height: 50%;
+}
+
+@media  (min-width : 768px) and (max-width : 1024px) {  
+    .mini-notices-container{
+        right: 13%;
+        display: flex;
+        flex-direction: row;
+
+        align-items: flex-start;
+        justify-content: left;
+        margin-left: 20px;
+        
+    }
+
+    .subnotice{
+        max-width: 20%;
+        margin: 10px;
+    }
+}
+
+    
+@media (min-width : 1025px){
+    .subnotice{
+        max-width: 20%;
+        margin: 10px;
+    }
+
+    .mini-notices-container{
+        right: 34%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
+        margin-left: 20px;
+    }
+}
+

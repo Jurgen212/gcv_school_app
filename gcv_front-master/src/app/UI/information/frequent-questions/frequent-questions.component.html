@@ -1,0 +1,2 @@
+<app-loader-spinner *ngIf="DropTemplate === undefined || DropTemplate === null"></app-loader-spinner>
+<app-principal-drop *ngIf="DropTemplate !== undefined" [data]="DropTemplate"></app-principal-drop>

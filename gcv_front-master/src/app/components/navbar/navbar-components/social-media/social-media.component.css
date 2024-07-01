@@ -1,0 +1,127 @@
+.social-media-nav{
+    padding-top     : 50px      ;
+    height          : 150px     ;
+    background-color: white     ;
+
+    display             : flex          ;
+    flex-direction      : row           ;
+    justify-content     : space-around  ;
+    align-items         : center        ;
+}
+
+a{
+    text-decoration : none      ;
+    cursor          : pointer   ;
+}
+
+.pse-container{
+    width               : 30%           ;
+    display             : flex          ;
+    justify-content     : space-around  ;
+    flex-wrap           : wrap          ;
+}
+
+.social-container{
+    width           : 30%;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : left;
+    margin-right    : 20px;
+}
+
+.pagos-img > img{
+    max-width: 40px;
+}
+
+.pagos-pse > img{
+    max-width: 40px;
+}
+
+
+
+.image-media{
+    max-width       : 40px;    
+    margin-right    : 10px;
+}
+
+
+
+@media (min-width : 768px) and (max-width : 1024px) {  
+
+
+    .image-media{
+        max-width       : 30px;    
+        margin-right    : 10px;
+    }
+
+    .pagos-img > img{
+        max-width: 30px;
+    }
+    
+    .pagos-pse > img{
+        max-width: 30px;
+    }
+
+
+    .social-media-nav{
+        height  : 35px  ;
+        padding : 0     ;
+    }
+
+    .social-container{
+        width       : 30%;
+        margin-top  : 0px;
+        padding-top : 0px;
+    }
+
+    .pse-container{
+        width           : 81%;
+        justify-content : right;
+    }
+
+    
+    .img-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .social-container{
+        width           : 19%;
+        justify-content : center;
+    }
+
+    .pagos-pse{
+        margin-top      : 0px;
+        margin-right: 25px;
+    }
+}
+
+
+@media (min-width : 1024px) {  
+
+    .social-media-nav{
+        height: 40px;
+        padding: 0;
+    }    
+
+    .pse-container{
+        width           : 81%;
+        justify-content : right;
+    }
+
+    .social-container{
+        width           : 19%;
+        justify-content : center;
+    }
+
+    .image-media{
+        margin-right: 20px;
+    }
+    .pagos-pse{
+        margin-top  : 0px;
+        position    : relative;
+        right       : 50px;
+    }
+}

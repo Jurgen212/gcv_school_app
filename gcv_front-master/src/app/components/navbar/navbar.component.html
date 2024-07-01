@@ -1,0 +1,11 @@
+
+<button (click)="showNavbar()"
+        class="toggle-button"><img  src="../../../assets/navbar/hamburguer.png"
+                                    alt="open-close navbar"></button>
+
+<nav *ngIf="showNavbarBoolean" class="animate__animated animate__fadeInDown">
+
+    <app-social-media></app-social-media>
+    <app-middle-options></app-middle-options>
+    <app-principal-options></app-principal-options>
+</nav>

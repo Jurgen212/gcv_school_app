@@ -1,0 +1,92 @@
+<div class="middle-options-container">
+    <div class="second-container">
+        <div class="helpers-options-contain">
+
+            <!-- *ngIf="rutasMostrar.padres_subelements.length !== 0" -->
+            <div    class       ="contenedor_item"
+                    (click)     ="mostrar_subcomponente_padres()"
+                    (mouseleave)="esconder_subcomponentes()"> 
+
+                <span   class="helper-option" 
+                        >Padres      <img   class="down-arrow" 
+                                            src="../../../../../assets/navbar/down-arrow.png"
+                                            alt="arrow"></span>
+
+                <div    class="subcontain s_1" 
+                        *ngIf="padres_ver">
+
+                    <a  *ngFor  ="let item of lista_opciones_padres()"  
+                        class   ="subitem"
+                        [routerLink] ="getRouterLink(item.link)"
+                        (click) ="cerrarNavbar()">{{item.name}}</a>
+
+                    <a  class   ="subitem"
+                        href="https://www.redpapaz.org/"
+                        (click) ="cerrarNavbar()"
+                        target="_blanck">RED PAPAZ</a>
+                        
+                </div>
+            </div>
+            
+<!-- *ngIf="rutasMostrar.estudiantes_subelements.length !== 0" -->
+            <div    class       ="contenedor_item"
+                    (click)     ="mostrar_subcomponente_estudiantes()"
+                    (mouseleave)="esconder_subcomponentes()">
+
+                <span   class="helper-option"
+                        >Estudiantes <img   class="down-arrow"  
+                                            src="../../../../../assets/navbar/down-arrow.png"
+                                            alt="arrow"></span>
+
+                <div    class="subcontain s_2"
+                        *ngIf="estudiantes_ver">
+
+                    <a  *ngFor  ="let item of lista_opciones_estudiantes()"  
+                        class   ="subitem"
+                        [routerLink]  ="getRouterLink(item.link)"
+                        (click) ="cerrarNavbar()">{{item.name}}</a>
+                </div>
+            </div>
+
+<!-- *ngIf="rutasMostrar.personal_subelements.length !== 0" -->
+            <div    class       ="contenedor_item"
+                    (click)     ="mostrar_subcomponente_trabajadores()"
+                    (mouseleave)="esconder_subcomponentes()">
+
+                <span   class="helper-option"
+                        >Personal    <img   class="down-arrow"  
+                                            src="../../../../../assets/navbar/down-arrow.png"
+                                            alt="arrow"></span>
+
+                <div    class="subcontain s_3"
+                        *ngIf="trabajadores_ver">
+
+                    <a  *ngFor  ="let item of lista_opciones_personal()"  
+                        class   ="subitem"
+                        [routerLink]  ="getRouterLink(item.link)"
+                        (click) ="cerrarNavbar()">{{item.name}}</a>
+
+                    <a  class   ="subitem"
+                        [href]   ="zeti_link"
+                        target="_blanck"
+                        (click) ="cerrarNavbar()">Ingreso a plataforma ZETI</a>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="contact-container">
+            <a  class="email-option"
+                (click) ="cerrarNavbar()" 
+                *ngIf="correo_contacto !== undefined" 
+                [routerLink]="correo_contacto">
+                
+                <img    class   ="mail-icon" 
+                        src     ="../../../../../assets/navbar/mail-icon.png"
+                        alt     ="mail">     Contáctenos
+            </a>
+
+        </div>
+    </div>
+</div>
+

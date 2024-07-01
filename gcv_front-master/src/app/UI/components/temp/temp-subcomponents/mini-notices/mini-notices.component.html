@@ -1,0 +1,8 @@
+<div class="mini-notices-container" >
+
+    <div    class="subnotice" *ngFor="let subNotice of noticiasMostrar" (click)="redireccion( subNotice.id_notice)">
+        <img    [src]="subNotice.data.image"
+                    class="image">
+        <p class="title">{{ subNotice.data.title }}</p>
+    </div>
+</div>

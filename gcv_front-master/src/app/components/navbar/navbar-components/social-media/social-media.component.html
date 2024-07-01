@@ -1,0 +1,48 @@
+
+<div class="social-media-nav">
+
+    <div class="pse-container">
+        <a  class="pagos-pse" 
+            *ngIf="pagosPSELink !== undefined"   
+            [href]="pagosPSELink"
+            target="_blank">    <img    src="../../../../../assets/social-media/pse.png"
+                                        (click)="cerrarNavbar()"
+                                        alt="pse"></a>
+
+        <a  class="pagos-img"
+            *ngIf="zetiLink !== undefined"       
+            [href]="zetiLink"
+            target="_blank">    <img src="../../../../../assets/social-media/z-icon.png" (click)="cerrarNavbar()"></a>
+    </div>
+
+    <div class="social-container">
+
+        <a  class="img-container"    
+            *ngIf="facebookLink !== undefined"   
+            [href]="facebookLink"
+            target="_blank"><img    class="image-media" 
+                                    src="../../../../../assets/social-media/facebook.png" 
+                                    (click)="cerrarNavbar()"
+                                    alt="facebook icon"></a>
+
+        <a  class="img-container"
+            *ngIf="instagramLink !== undefined"   
+            [href]="instagramLink"
+            target="_blank">
+                            <img    class="image-media" 
+                                    alt="instagram icon"
+                                    src="../../../../../assets/social-media/instagram.png" 
+                                    (click)="cerrarNavbar()"></a>
+
+        <a  class="img-container"
+            *ngIf="youtubeLink !== undefined"   
+            [href]="youtubeLink"
+            target="_blank">
+                            <img    class="image-media" 
+                                    src="../../../../../assets/social-media/youtube.png" 
+                                    alt="youtube icon"
+                                    (click)="cerrarNavbar()"></a>
+    </div>
+</div>
+
+ 

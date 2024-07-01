@@ -1,0 +1,23 @@
+.container-router{
+    width           : 100%  ;
+    height          : 100%  ;
+    display         : flex  ;
+    flex-direction  : column;
+    padding-top     : 90px  ;
+}
+
+    /* iPads (portrait and landscape) ----------- */
+@media  (min-width : 768px) and (max-width : 1024px) {  
+    .container-router{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width : 1025px){
+    .container-router{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+

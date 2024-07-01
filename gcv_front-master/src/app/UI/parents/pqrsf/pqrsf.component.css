@@ -1,0 +1,228 @@
+
+.contenedor-principal{
+    display         : flex      ;
+    width           : 100%      ;
+    height          : 100%;
+    flex-direction  : row       ;
+    align-items     : center    ;
+    justify-content : center    ;
+    margin-bottom   : 20px;
+}
+
+.select-contain{
+    display         : flex;
+    flex-direction  : row;
+    font-size       : 13px;
+    font-weight     : 400;
+    align-items     : center;
+    justify-content : space-around;
+    color: var(--principal-green);
+}
+
+.contenedor-izquierda{
+    position        : absolute  ;
+
+    background-image    : url("../../../../assets/contactanos/contactanos.jpg");
+    background-position : bottom;
+
+    opacity             : 0.04       ;
+    width               : 100%      ;
+    min-height          : 100%;
+    background-repeat   : no-repeat;
+    z-index             : -99999999   ;
+}
+
+.contactanos-img{
+    display: none;
+}
+
+.select{
+    height          : 30px;
+    border          : none;
+    width           : 150px;
+    border-bottom   : 1px solid var(--principal-green);
+    font-size       : 15px;
+    color           : var(--principal-green);
+}
+
+.contactanos-img{
+    border-radius   : 10px  ;
+    width           : 400px ;
+}
+
+.contenedor-derecha{
+    
+    display         : flex;
+    flex-direction  : column;
+
+    gap         : 20px;
+    width       : 50%;
+    padding-top : 40px;
+}
+
+.button{
+    height  : 40px;
+    width   : 100px;
+
+    display         : flex  ;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+
+    background-color: var(--principal-green);
+    border          : none;
+    border-radius   : 3px;
+
+    text-decoration : none      ;
+    color           : white   ;
+    font-size       : 12px      ;
+    font-weight     : 400       ;
+}
+
+.button:hover{
+    background-color: #ffcc04;;
+}
+
+.title{
+    font-size: 15px;
+    text-align: left;
+    color: var(--principal-green);
+}
+.input-normal{
+    height          : 35px;
+    border          : none;
+    background-color: transparent;
+    border-bottom   : 1px solid var(--principal-green);
+    font-size       : 14px;
+}
+
+
+.mensaje {
+    height          : 100px;
+    border          : none;
+    resize          : none;
+    background-color: transparent;
+    border-bottom   : 1px solid var(--principal-green);
+    font-size       : 14px;
+}
+
+input:focus, textarea{
+    outline: none;
+}
+
+
+@media (min-width : 680px) and (max-width : 1024px) {  
+
+
+
+    .contactanos-img{
+        display : block;
+        width   : 50px;
+    }
+
+    .contenedor-principal{
+        flex-direction  : row           ;
+        align-items     : center        ;
+        justify-content : space-around  ;
+    }
+    
+    
+
+
+    .contenedor-izquierda{
+        position        : relative  ;
+        top             : 0px       ;
+    
+        background-image: none;
+
+        height          : auto      ;
+        opacity         : 1         ;
+        width           : 50%      ;
+        background-repeat: no-repeat;
+        z-index         : 0         ;
+
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+    }
+
+
+
+    .contenedor-derecha{
+        gap          : 10px;
+        width        : 50%;
+        padding-top  : 40px;
+        padding-right: 15px;
+    }
+
+    
+
+
+    .contactanos-img{
+        border-radius   : 10px  ;
+        width           : 90% ;
+    }
+
+
+.title{
+    font-size   : 17px;
+    text-align  : center;
+    color       : var(--principal-green);
+}
+}
+
+@media (min-width : 1025px){
+    .contactanos-img{
+        display : block;
+        width   : 50px;
+    }
+
+    .contenedor-principal{
+        flex-direction  : row           ;
+        align-items     : center        ;
+        justify-content : space-around  ;
+    }
+    
+    
+
+
+    .contenedor-izquierda{
+        position        : relative  ;
+        top             : 0px       ;
+    
+        background-image: none;
+
+        height          : auto      ;
+        opacity         : 1         ;
+        width           : 50%      ;
+        background-repeat: no-repeat;
+        z-index         : 0         ;
+
+        display             : flex;
+        justify-content     : center;
+        align-items         : center;
+        max-width           : 500px;
+    }
+
+
+
+    .contenedor-derecha{
+        gap          : 15px;
+        width        : 50%;
+        padding-top  : 40px;
+        padding-right: 0px;
+        max-width    : 500px;
+    }
+
+
+    .contactanos-img{
+        border-radius   : 10px  ;
+        width           : 90% ;
+    }
+
+.title{
+    font-size   : 17px;
+    text-align  : center;
+    color       : var(--principal-green);
+}
+}

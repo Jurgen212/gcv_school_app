@@ -1,0 +1,91 @@
+.principal-container{
+    width           : 100vw     ; 
+    position        : relative  ;
+    display         : flex      ;
+    flex-direction  : column    ;
+    align-items     : center    ;
+}
+
+
+app-multimedia{
+    width       : 100%;    
+}
+
+app-banners{
+    width: 100%;
+}
+
+.section-data-container{
+    width           : 80%;
+    flex-direction  : column;
+    align-items     : center;
+}
+
+.section-data-1{
+    display         : flex  ;
+    flex-direction  : column;
+    gap             : 50px  ;
+    padding         : 20px;
+}
+
+
+
+@media  (min-width : 768px) and (max-width : 1024px) {  
+
+
+    .principal-container{
+        right   : 15%;
+        margin  : 0;
+    }
+
+
+    .section-data-container{
+        height                  : 100%              ;
+        margin                  : 0                 ;
+        width                   : 90%               ;
+    }
+
+
+    .section-data-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top         : 50px;                           
+        padding-bottom      : 50px;
+    }
+
+    app-multimedia{
+        width: 70%;
+    }
+}
+
+    
+@media (min-width : 1025px){
+    .principal-container{
+        right   : 34%;
+        margin  : 0;
+    }
+
+
+    .section-data-container{
+        height                  : 100%              ;
+        margin                  : 0                 ;
+        width                   : 90%               ;
+    }
+
+
+    .section-data-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top         : 50px;                           
+        padding-bottom      : 50px;
+    }
+
+    app-multimedia{
+        width: 50%;
+    }
+}
+

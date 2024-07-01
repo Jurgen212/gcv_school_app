@@ -1,0 +1,226 @@
+.middle-options-container{
+    background-color: var(--principal-yellow);
+}
+
+.down-arrow{
+    width: 10px;
+}
+
+.second-container{
+    height  : 100%;
+    width   : 100%;
+}
+
+.helpers-options-contain{
+    display         : flex  ;
+    
+    flex-direction  : column        ;
+    justify-content : space-between ;
+
+    padding-left    : 20px;
+    padding-top     : 10px;
+    color           : var( --principal-green );
+}
+
+a{
+    cursor          : pointer;
+    text-decoration: none;
+    color           : var( --principal-green);
+}
+
+span{
+    cursor      : pointer;
+    user-select : none;
+}
+
+.email-option{
+    color           :  black  ;
+    text-decoration : none      ;
+    font-weight     : 500       ;
+    font-size       : 15px      ;
+    cursor          : pointer   ;
+}
+
+.mail-icon{
+    max-width: 15px;
+}
+
+.contact-container{
+    height      : 30%   ;
+    padding     :20px   ;
+    font-size   : 10px  ;
+}
+
+.subcontain{
+    min-width           : 100%;
+    display         : flex  ;
+    flex-direction  : column;
+    padding-left    : 20px;
+    font-size       : 14px;
+}
+
+.subcontain > a{
+    width       : 90%; 
+    padding-left: 10px;
+}
+
+.subcontain > a:hover{
+    color           : var(--principal-yellow);
+    background-color: var(--principal-green);
+    border-bottom   : 1px solid var( --principal-green);
+}
+
+
+@media (min-width : 768px) and (max-width : 1024px) {  
+
+    .middle-options-container{
+        height      : 30px;
+        width       : 100%;
+        padding     : 0;
+    }  
+
+    .contenedor_item{
+        height: 100%;
+    }
+
+    .second-container{
+        display         : flex      ;
+        flex-direction  : row       ;
+        width           : 80%       ;
+        margin-left     : 10%       ;
+    }
+
+    .helpers-options-contain{
+        display             : flex  ;
+        flex-direction      : row   ;
+        align-items         : center;
+        justify-content     : left  ;
+        width               : 70%   ;
+        padding-left        : 0     ;
+        padding-top         : 0px   ;
+    }
+
+    .contact-container{
+        padding     : 0     ;
+        display     : flex  ;
+        height      : 100%  ;
+        width       : 30%   ;
+
+        justify-content : right ;
+        align-items     : center;
+        padding-right: 10px;
+    }
+
+    .helper-option{
+        font-size   : 10px  ;
+        font-weight : 500   ;
+        margin: 10px;
+    }
+
+    .mail-icon{
+        position: relative;
+    }
+
+    .email-option{
+        font-size: 12px;
+    }
+
+
+    .subcontain{
+        min-width: 200px;
+        background-color: var(--principal-green);
+        padding-left    : 5px;
+        padding-right   : 10px;
+        line-height     : 30px;
+        position        : absolute;
+    }
+    
+    .subcontain > a{
+        font-size   : 12px;
+        color       : white;
+        padding     : 5px;
+        width       : 100%;
+    }
+
+    .subcontain > a:hover{
+        border-bottom: 1px solid black;
+    }
+}
+
+
+@media (min-width : 1024px) {  
+    .middle-options-container{
+        height      : 30px;
+        width       : 100%;
+        padding     : 0;
+    }  
+
+    .second-container{
+        display         : flex      ;
+        flex-direction  : row       ;
+        width           : 60%       ;
+        margin-left     : 20%       ;
+    }
+
+    .helpers-options-contain{
+        display             : flex  ;
+        flex-direction      : row   ;
+        align-items         : center;
+        justify-content     : left  ;
+        width               : 70%   ;
+        padding-left        : 0     ;
+        padding-top         : 0px   ;
+    }
+
+    .contact-container{
+        padding     : 0     ;
+        display     : flex  ;
+        height      : 100%  ;
+        width       : 30%   ;
+
+        justify-content : right ;
+        align-items     : center;
+        padding-right: 10px;
+    }
+
+    .helper-option{
+        font-size   : 10px  ;
+        font-weight : 500   ;
+        margin-right: 10px  ;
+    }
+
+    .mail-icon{
+        position: relative;
+    }
+
+    .email-option{
+        font-size: 12px;
+        
+    }
+
+
+    .contenedor_item{
+        
+        height: 100%;
+    }
+
+    .subcontain{
+        min-width           : 200px                 ;
+        background-color    : var(--principal-green);
+        padding-left        : 5px                   ;
+        padding-right       : 10px                  ;
+        position            : absolute              ;
+        top: 65px;
+    }
+    
+    .subcontain > a{
+        font-size   : 12px      ;
+        padding     : 10px      ;
+        color       : white   ;
+        width       : 100%      ;
+    }
+
+    .subcontain > a:hover{
+        border-bottom: 1px solid black;
+    }
+}

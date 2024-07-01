@@ -1,0 +1,59 @@
+<div class="row text-center container-princ" *ngIf="events !== undefined && events.length !== 0">
+  <div class="col-md-4">
+    <div class="btn-group">
+      <div
+        class="btn btn-outline-secondary"
+        mwlCalendarToday
+        [(viewDate)]="viewDate"
+      >
+        Hoy
+      </div>
+
+      <div
+        class="btn btn-success"
+        mwlCalendarNextView
+        [view]="view"
+        [(viewDate)]="viewDate"
+        (viewDateChange)="closeOpenMonthViewDay()"
+      >
+        Siguiente 
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <p class="title-month"> {{ viewDate | calendarDate : view + "ViewTitle" : "es" | titlecase }}</p>
+  </div>
+</div>
+<br />
+
+<ng-template #customCellTemplate let-day="day" let-locale="locale">
+  <div class="cal-cell-top">
+    <span class="cal-day-badge" *ngIf="day.badgeTotal > 0">{{
+      day.badgeTotal
+    }}</span>
+    <span class="cal-day-number">{{
+      day.date | calendarDate : "monthViewDayNumber" : locale
+    }}</span>
+  </div>
+  <small style="margin: 5px" *ngFor="let item of day.events" class="subinfo">{{
+    item.title
+  }}</small>
+</ng-template>
+
+<div [ngSwitch]="view" *ngIf="events.length !== 0">
+  <mwl-calendar-month-view
+    *ngSwitchCase="'month'"
+    [viewDate]="viewDate"
+    [events]="events"
+    [cellTemplate]="customCellTemplate"
+  >
+  </mwl-calendar-month-view>
+  <br>
+</div>
+
+
+<div *ngIf="events === undefined || events.length === 0" class="contenedor-advertencia">
+  <p class="adv-title">Por el momento no hay eventos en el calendario.</p>
+  <img src="../../../../assets/logo.png" class="imagen-no-existe">
+</div>

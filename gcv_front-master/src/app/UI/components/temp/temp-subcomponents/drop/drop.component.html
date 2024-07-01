@@ -1,0 +1,75 @@
+<div    class="data-container">
+
+    <div *ngFor="let item of dropOptions; let i = index" class="item-container">
+
+        <!-- <p [style.font-size]="item.fontSizeTitle"
+            class="title">
+            <img    src     ="../../../../../../assets/navbar/down-arrow.png"
+                    class   ="arrow-down">
+             -->
+        
+        <button type="button" 
+                class="title"
+                [style.font-size]="item.fontSizeTitle"
+                (click)="toggle( i )">
+
+                <img    src     ="../../../../../../assets/navbar/down-arrow.png"
+                        class   ="arrow-down">
+                        {{ item.title }}
+        </button>
+
+        <!-- Menu a ocultar -->
+        <div class="sub-items-container" *ngIf="listShowDrops[i]">
+
+            <div *ngFor="let subitem of item.drop" class="sub-cont">
+                
+                <!-- Para PDF -->
+                <object [data]="subitem.urlImage | safe" 
+                        type="application/pdf" 
+                        class="pdf-container"
+                        *ngIf="validatePDF(subitem.urlImage)"
+                        style="min-height: 600px;">
+
+                    <p>Unable to display PDF file.</p> 
+                </object>
+                <a      [href]="subitem.urlImage"
+                        target="_blanck"
+                        *ngIf="validatePDF(subitem.urlImage)">Click aqui para ver PDF online</a>
+
+                <!-- Para imagen descargable -->
+                <a  *ngIf="subitem.isImg && !validatePDF(subitem.urlImage)"
+                    [href]="subitem.urlImage"
+                    [download]="item.title"
+                    class="download-img">
+                    
+                    <img [src]="subitem.urlImage" class="imagen" [alt]="subitem.urlImage">
+                </a>
+                
+                <video  *ngIf="!subitem.isImg && !validatePDF(subitem.urlImage) && subitem.urlImage !== ''"
+                        class="video"
+                        controls
+                        style="max-width: 100%;">
+
+                        <source [src]="subitem.urlImage">
+                        "Tu navegador no soporta videos, por favor cambie a uno mas reciente"
+                </video> 
+
+                <!-- Para url -->
+                <a  *ngIf="subitem.a_link !== '' && !subitem.isImg  && !validatePDF(subitem.urlImage)"
+                    [style.font-size]   ="subitem.fontSizeData"
+                    class="texto"
+                    [href]="subitem.a_link"
+                    target="_blank">
+                    {{ subitem.info }}
+                </a>
+
+                <!-- Para texto plano -->
+                <p  *ngIf               ="!subitem.isImg && !validatePDF(subitem.urlImage) && subitem.a_link === ''"
+                    [style.font-size]   ="subitem.fontSizeData"
+                    class="texto">
+                    {{subitem.info}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div> 

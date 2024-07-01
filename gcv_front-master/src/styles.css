@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+:root{
+    --principal-green   :#086434 ;
+    --principal-yellow  : #ffcc04 ;
+}
+
+
+
+html {
+    min-height  : 100%      ;
+    position    : relative  ;
+  }
+  
+body {
+    margin          : 0     ;
+    margin-bottom   :  120px;
+    overflow-x      : hidden;
+}

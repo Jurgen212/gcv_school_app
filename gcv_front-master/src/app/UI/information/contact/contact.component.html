@@ -1,0 +1,44 @@
+<div class="principal">
+
+        <div class="contenedor-principal">
+            <div class="contenedor-izquierda">
+                <img    src="../../../../assets/contactanos/contactanos.jpg"
+                        class="contactanos-img">
+            </div>
+        
+            <form       class="contenedor-derecha"
+                        [formGroup]="contactForm">
+        
+                <p class="title">Complete el siguiente formulario para contactarnos</p>
+        
+                
+                <input  placeholder    ="Nombre Completo" 
+                        type           ="text"
+                        class          ="input-normal"
+                        formControlName="name">
+        
+                <input placeholder      ="Correo Electrónico"
+                        type            ="mail" 
+                        class           ="input-normal"
+                        formControlName = "mail">
+        
+                <textarea       placeholder     ="Mensaje"
+                                class           ="mensaje"
+                                formControlName ="message"></textarea>
+        
+                
+                <button class="button"
+                        (click)="sendForm()">Enviar</button>
+            </form>
+        </div>
+        <div class="map-container">
+                <a      href="https://www.google.com/maps/place/Colegio+Gimnasio+Central+del+Valle/@3.8959062,-76.2976117,17z/data=!3m1!4b1!4m6!3m5!1s0x8e39e640123134c3:0x2784762ca141d289!8m2!3d3.8959062!4d-76.2950368!16s%2Fg%2F11cjhhw9mb?hl=es&entry=ttu"
+                        target="_blank"
+                        class="icono-llegar"><img src="../../../../assets/how-to-get.png"></a>
+                <div id="map">
+
+                </div>
+        </div>
+</div>
+
+

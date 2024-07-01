@@ -1,0 +1,2 @@
+<app-loader-spinner *ngIf="data_template === undefined || data_template === null"></app-loader-spinner>
+<app-principal-template *ngIf="data_template !== undefined " [data]="data_template"></app-principal-template>

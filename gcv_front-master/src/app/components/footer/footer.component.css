@@ -1,0 +1,46 @@
+footer{
+    width: 100%;
+    height: 120px;
+
+    position: absolute;
+    bottom: 0;
+    margin: 1px solid black;
+    background-color: #e7e7e7;
+
+
+    display         : flex          ;
+    flex-direction  : row           ;
+    align-items     : center        ;
+    justify-content: space-between  ;
+}
+
+.images-f-container{
+    width:15%;
+}
+
+.text-f-container{
+    width       : 85%                       ;
+    height      : 100%                      ;
+    font-size   : 10px                      ;
+    color       : var( --principal-green)   ;
+    line-height : 0px                       ;
+    direction   : rtl                       ;
+    margin-bottom   : 10px;
+    padding-top     : 10px;
+}
+
+p{
+    margin: 16px;
+}
+
+
+@media  (min-width : 768px) {
+    .text-f-container{
+        padding: 20px;
+    }
+
+    .images-f-container{
+        margin-left: 40px;
+    }
+
+}

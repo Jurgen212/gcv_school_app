@@ -1,0 +1,152 @@
+.principal-container{
+    width           : 100vw     ; 
+    position        : relative  ;
+    display         : flex      ;
+    flex-direction  : column    ;
+    align-items     : center    ;
+}
+
+app-multimedia{
+    width: 100%;
+}
+
+app-banners{
+    width: 100%;
+}
+
+.section-data-container{
+    width           : 80%;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    gap             : 25px;
+    padding-top     : 20px;
+}
+
+.info-1{
+    border-bottom: 1px solid black;
+    padding: 10px
+}
+
+.section-data-1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-data-2{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 10px;
+    width: 100%;
+}
+
+.multi-2, .multi-1{
+    width: 100%;
+}
+
+@media  (min-width : 768px) and (max-width : 1024px) {  
+
+
+    .principal-container{
+        right   : 15%;
+        margin  : 0;
+    }
+
+
+    .section-data-container{
+        display                 : flex              ;
+        height                  : 100%              ;
+        flex-direction          : column            ;
+        margin                  : 0                 ;
+        gap                     : 0                 ;
+        width                   : 90%               ;
+    }
+
+
+    .section-data-1{
+        padding-top         : 50px;
+        width               : 100%;
+        display             : flex;
+        align-items         : center;
+        justify-content     : space-between;
+        flex-direction      : row ;
+        padding-left        : 15px;                             
+        padding-right       : 15px;
+        padding-bottom      : 20px;
+    }
+
+    .section-data-2{
+        height: 100%;
+        display             : flex          ;
+        align-items         : flex-start    ;   
+        justify-content     : space-around  ;
+        flex-direction      : row           ;
+        padding-top         : 10px          ;
+        padding-left        : 15px          ;                             
+        padding-right       : 15px          ;
+        padding-bottom      : 30px          ;
+    }
+
+    .multi-2, .multi-1{
+        width: 100%;
+    }
+
+}
+
+    
+@media (min-width : 1025px){
+    .principal-container{
+        right   : 34%;
+        margin  : 0;
+    }
+
+
+
+    .section-data-container{
+        display                 : flex              ;
+        height                  : 100%              ;
+        flex-direction          : column            ;
+        margin                  : 0                 ;
+        gap                     : 0                 ;
+        width                   : 90%               ;
+    } 
+
+
+    .section-data-1{
+        padding-top         : 50px;
+        width               : 100%;
+
+        display             : flex;
+        align-items         : center;
+        justify-content     : space-between;
+        flex-direction      : row ;
+        padding-left        : 15px;                             
+        padding-right       : 15px;
+        padding-bottom      : 20px;
+    }
+
+    .section-data-2{
+        height              : 100%; 
+        display             : flex          ;
+        align-items         : flex-start    ;    
+        justify-content     : space-around  ;
+        flex-direction      : row           ;
+        padding-top         : 10px          ;
+        padding-left        : 15px          ;                             
+        padding-right       : 15px          ;
+        padding-bottom      : 30px          ;
+    }
+
+    .info-1, .info-2{
+        max-width: 50%;
+    }
+
+    .multi-2, .multi-1{
+        width: 100%;
+    }
+}
+

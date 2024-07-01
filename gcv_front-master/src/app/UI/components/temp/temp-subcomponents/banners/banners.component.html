@@ -1,0 +1,42 @@
+
+<div class="banner-container" *ngIf="multimediaOptions.exist" >
+
+    <a  class="banner-1"
+        *ngIf="multimediaOptions.isImg && multimediaOptions.a_link !== ''"
+        [href]="multimediaOptions.a_link"
+        target="_blanck">
+
+        <img    class="banner-1"
+                [src]="multimediaOptions.urlLink">
+    </a>
+
+    <img  class="banner-1"
+          [src]="multimediaOptions.urlLink"
+        *ngIf="multimediaOptions.isImg && multimediaOptions.a_link === ''" >
+    
+    <!-- Video de youtube -->
+    <iframe     *ngIf           ="!multimediaOptions.isImg && validarSiEsYoutube()"
+                width           ="100%" 
+                height          ="500" 
+                [src]           ="urlYoutube | safe" 
+                title           ="YouTube video player" 
+                frameborder     ="0" 
+                allow           =  "accelerometer; 
+                                   autoplay; 
+                                   clipboard-write; 
+                                   encrypted-media; 
+                                   gyroscope; 
+                                   picture-in-picture; 
+                                   web-share" 
+                                   allowfullscreen>
+    </iframe>
+      <!-- Video de archivo normal  -->
+        <video  *ngIf="!multimediaOptions.isImg && !validarSiEsYoutube()"
+            class="banner-1"
+            controls
+            style="max-height: 500px; background-color: #086434;">
+        
+        <source [src]="multimediaOptions.urlLink">
+        "Tu navegador no soporta videos, por favor cambie a uno mas reciente"
+    </video> 
+</div> 

@@ -1,0 +1,52 @@
+<div class="contenedor-principal">
+    <div class="contenedor-izquierda">
+        <img    src="../../../../assets/contactanos/contactanos.jpg"
+                class="contactanos-img">
+    </div>
+
+    <form       class           ="contenedor-derecha"
+                [formGroup]     ="pqrsfForm">
+
+        <p class="title">Radicar PQRSF</p>
+
+        <input  placeholder="Nombre completo" 
+                type="text"
+                class="input-normal"
+                formControlName="name">
+
+        <input  placeholder="Número de identificación" 
+                type="number"
+                class="input-normal"
+                formControlName="num_id">
+
+        <input  placeholder="Teléfono/Numero de contacto" 
+                type="number"
+                class="input-normal"
+                formControlName="phone">
+
+        <input placeholder      ="Correo Electrónico"
+                type            ="mail" 
+                class           ="input-normal"
+                formControlName ="mail">
+
+        <div class="select-contain">
+                <span>Seleccione el tipo de solicitud</span>
+                <select class           ="select"
+                        formControlName ="type">
+                    <option value="Peticion">petición</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                    <option value="Felicitacion">Felicitación</option>
+                </select>
+        </div>
+                  
+
+        <textarea       placeholder     ="Descripción"
+                        class           ="mensaje"
+                        formControlName ="message"></textarea>
+
+                        <button class="button"
+                        (click)="sendForm()">Enviar</button>
+    </form>
+</div>

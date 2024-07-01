@@ -1,0 +1,80 @@
+
+.logo{
+    width       : 30px      ;
+    margin-right: 10px      ;
+    cursor      : pointer   ;
+    margin-bottom: 5px      ;
+}
+
+.container-principal-name{
+    display         : flex          ;
+    flex-direction  : column        ;
+    align-items     : center        ;
+    justify-content : space-evenly  ;
+
+    width           : 100%  ;
+    height          : auto  ;
+    max-height      : 200px ;
+
+    padding     : 10px;
+    margin-top  : 10px;
+
+    text-align: center;
+}
+
+.principal-name{
+    font-size   : 15px  ;
+    font-weight : 300   ;
+    color       : var( --principal-green);
+}
+
+.admisiones-button{
+    width   : 100px ;
+    height  : 30px  ;
+
+    display         : flex  ;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+
+    background-color: #ffcc04;
+    border          : none;
+    border-radius   : 3px;
+
+    text-decoration : none      ;
+    color           : white   ;
+    font-size       : 12px      ;
+    font-weight     : 400       ;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media  (min-width : 768px) and (max-width : 1024px) {  
+            
+    .container-principal-name{
+        flex-direction  : row           ;
+        height          : 80px          ;
+        padding         : 0px           ;
+        margin          : 0             ;
+        justify-content : space-between ;
+    }
+
+    .principal-name{
+        font-size   : 18px;
+    }        
+}
+
+    
+@media  (min-width : 1025px){
+    .container-principal-name{
+        flex-direction  : row   ;
+        height          : 80px  ;
+        padding         : 0px   ;
+        margin          : 0px   ;
+        justify-content : space-between;
+    }
+
+    .principal-name{
+        font-size   : 18px;
+    }
+}
+    
